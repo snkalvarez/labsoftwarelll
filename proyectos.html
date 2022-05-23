@@ -18,7 +18,7 @@
             </li>
             <li><a href="pasatiempos.html">Pasatiempos</a>
             </li>
-            <li><a href="contacto.html">Contacto</a>
+            <li><a href="contacto.html" onclick="return confirmar()">Contacto</a>
             </li>
         </ul>
     </nav>    
@@ -32,5 +32,10 @@
         <li>...</li>
     </div>
     <footer class="center"> Biografia Julio Alvarez v2 </footer>
+    <script>
+        function confirmar(){
+            return confirm("contacto continuar?.")
+        }
+    </script>
 </body>
 </html>

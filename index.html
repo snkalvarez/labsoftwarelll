@@ -18,7 +18,7 @@
             </li>
             <li><a href="pasatiempos.html">Pasatiempos</a>
             </li>
-            <li><a href="contacto.html">Contacto</a>
+            <li><a href="contacto.html" onclick="return confirmar()">Contacto</a>
             </li>
         </ul>
     </nav>    
@@ -60,6 +60,30 @@
         </div>
     </div>
     <hr>
+    <form action="">
+        <input type="text" size="10" name="mireloj">
+        <p>Reloj con javaScript</p>
+    </form>
+    <script>
+        var r = setInterval("Ver_Hora()",500);
+    </script>
     <footer class="center"> Biografia Julio Alvarez v2 </footer>
+    <script>
+        alert("hola bienvenido");
+        function confirmar(){
+            return confirm("contacto continuar?.")
+        }
+        function Ver_Hora(){
+            var mihora = new Date();
+            var horas = mihora.getHours().toString();
+            var minutos = mihora.getMinutes().toString();
+            if(minutos.length == 1) minutos = "0" + minutos;
+            var segundos = mihora.getSeconds().toString();
+            if(segundos.length == 1) segundos = "0" + segundos;
+            
+            document.forms[0].mireloj.value = horas+" : "+minutos+" : "+ segundos;
+        }
+    </script>
+    
 </body>
 </html>
